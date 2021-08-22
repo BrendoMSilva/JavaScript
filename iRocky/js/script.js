@@ -1,8 +1,18 @@
-function touchRocky() {
-    let userName = prompt('Qual é o seu nome?', 'Enter your name here.');
+window.onload = (event) => {
+    alert('Olá, eu sou o Rocky.');
+};
 
-    if (userName) {
+iRocky.addEventListener("click", () => {
+    touchRocky();
+});
+
+function touchRocky() {
+    let userName = prompt("Qual é o seu nome? Enter your name here.");
+
+    if (userName != "") {
         alert('Prazer em conhecer você,' + userName + '.');
-        document.getElementById('rockImg').src = 'rockhappy.png';
+        iRocky.src = "image/rockhappy.png";
+    } else {
+        alert("Please, say your name.");
     }
 }
